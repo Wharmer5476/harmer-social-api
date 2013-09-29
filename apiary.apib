@@ -1,0 +1,95 @@
+--- Harmer Social API ---
+
+---
+Welcome to the my Social API documentation. All comments can be written in (support [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax)
+---
+
+--
+My Social Resources
+The following is a section of resources related to the social network data I display on my websites 
+--
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myTweets
+> Content-Type: application/json
+{ "username":"will", "numberOfTweets": 10 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent posts posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myBlog
+> Content-Type: application/json
+{ "username":"will", "numberOfPosts": 3 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the my contacts by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myLinkedin
+> Content-Type: application/json
+{ "username":"will", "numberOfContacts": 2 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myGithub
+> Content-Type: application/json
+{ "username":"will", "numberOfProjects": 2 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myLastFM
+> Content-Type: application/json
+{ "username":"will", "numberOfSongs": 2 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myGoodReads
+> Content-Type: application/json
+{ "username":"will", "numberOfBooks": 2 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myDribble
+> Content-Type: application/json
+{ "username":"will", "numberOfPictures": 2 }
+< 200
+< Content-Type: application/json
+{ "items": [
+{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25 }
+] }
+
+Returns a collection of the most recent Tweets posted by the user indicated by the username parameter.. (comment block again in Markdown)
+GET social/myCV
+> Content-Type: application/json
+{ "username":"will", "format": "pdf"}
+< 200
+{ "receipt": "/cv/will" }
+
+-- ContactMe Resources --
+
+This resource allows you to submit payment information to process your *shopping cart* items
+POST contactMe/contact
+{ "contact_firstname": "12345678900", "contact_surname": "123", "contact_message": "0112", "contact_format": "12345678900", "contact_address": "123" }
+< 200
+{ "receipt": "/payment/receipt/1" }
